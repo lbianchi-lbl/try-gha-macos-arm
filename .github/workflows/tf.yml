@@ -12,10 +12,6 @@ jobs:
     runs-on: macos-14
     steps:
 
-      - name: Install system dependencies
-        run: |
-          xcode-select --install
-
       - name: Install Miniconda
         run: |
           mkdir -p ~/miniconda3
