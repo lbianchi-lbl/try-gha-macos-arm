@@ -36,3 +36,11 @@ jobs:
           import tensorflow as tf
           print("Devices detected: ", tf.config.list_physical_devices())
           '
+
+      - name: Export environment
+        run: |
+          conda env export -n tensorflow-py311 --no-builds -f environment.yml
+
+          echo '```yaml' >> $GITHUB_STEP_SUMMARY
+          cat environment.yml >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
