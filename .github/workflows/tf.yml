@@ -23,7 +23,7 @@ jobs:
 
       - name: Create and populate Conda env
         run: |
-          conda create -n tensorflow-py311 --yes -c conda-forge python=3.11
+          conda create -n tensorflow-py311 --yes -c conda-forge python=3.11 root pandas matplotlib
           conda activate tensorflow-py311
           which python
           python -m pip install tensorflow==2.13
